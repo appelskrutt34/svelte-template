@@ -1,0 +1,40 @@
+@import "tailwindcss";
+
+.apexcharts-datalabel,
+.apexcharts-data-labels text {
+  display: none !important;
+}
+
+body {
+  color: #f4f4f5;
+  background-color: oklch(14.1% 0.005 285.823);
+  font-family: "roboto mono";
+}
+
+svg {
+  color: oklch(96.7% 0.001 286.375);
+}
+
+.chart-tooltip {
+  padding: 4px 8px;
+  font-size: 12px !important;
+  background: #f4f4f5;
+  color: oklch(14.1% 0.005 285.823) !important;
+  font-family: "roboto mono";
+  border-radius: 6px;
+}
+
+@layer utilities {
+  .brightness-20 {
+    filter: brightness(0.2);
+  }
+  .brightness-40 {
+    filter: brightness(0.4);
+  }
+  .brightness-60 {
+    filter: brightness(0.6);
+  }
+  .brightness-80 {
+    filter: brightness(0.8);
+  }
+}
