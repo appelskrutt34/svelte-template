@@ -3,14 +3,13 @@
   import { browser } from "$app/environment";
 
   let chart;
-  let { data, colors } = $props();
+  let { data, colors = ["#1d4ed8", "#0e7490"] } = $props();
   let chartElement;
 
   const options = {
     chart: {
       type: "bar",
       height: "100px",
-      width: "100%",
       parentHeightOffset: 0,
       sparkline: {
         enabled: true,
@@ -22,7 +21,7 @@
         show: false,
       },
     },
-    colors: colors || ["#1d4ed8", "#0e7490"],
+    colors: colors,
     tooltip: {
       custom: function ({ series, seriesIndex, dataPointIndex, w }) {
         return `

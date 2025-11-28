@@ -8,13 +8,13 @@
   import Exclamation from "$lib/components/icons/Exclamation.svelte";
   import Heart from "$lib/components/icons/Heart.svelte";
   import PullRequest from "$lib/components/icons/PullRequest.svelte";
-  import { onMount } from "svelte";
   import BarChart from "$lib/components/BarChart.svelte";
   import { page } from "$app/stores";
   import Star from "$lib/components/icons/Star.svelte";
   import Eye from "$lib/components/icons/Eye.svelte";
   import Fork from "$lib/components/icons/Fork.svelte";
   import File from "$lib/components/icons/File.svelte";
+  import DarkModeButton from "$lib/components/DarkModeButton.svelte";
   let data = $page.data;
   let opened_issues = data.opened_issues;
   let closed_issues = data.closed_issues;
@@ -24,23 +24,41 @@
   let commits = data.commits;
   let top_contributors = data.top_contributors;
   let stats = data.stats;
-
-  function toggleDarkMode() {
-    window.document.body.classList.toggle("dark");
-  }
 </script>
 
-<button
-  class="absolute top-2 right-2 px-4 py-2 rounded-md bg-zinc-100 dark:text-zinc-800 dark:bg-zinc-100 bg-zinc-800 text-zinc-100 cursor-pointer"
-  on:click={toggleDarkMode}>Toggle Dark Mode</button
->
-<div
-  aria-label="Svelte github statistics"
-  class="flex justify-center items-center my-12 mx-4 text-xs"
->
+<DarkModeButton></DarkModeButton>
+<main class="flex flex-col justify-center items-center my-12 mx-4 text-xs">
+  <p>Add Game here</p>
+  <p>...</p>
+  <p>Add Game here</p>
+  <p>...</p>
+
+  <section>
+    <table class="border border-gray-400 rounded-sm p-4">
+      <thead class="border border-gray-400 rounded-sm p-4">
+        <tr class="border border-gray-400 rounded-sm p-4">
+          <th class="border border-gray-400 rounded-sm p-4">Player</th>
+          <th class="border border-gray-400 rounded-sm p-4">Score</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Alice</td>
+          <td>1500</td>
+        </tr>
+        <tr>
+          <td>Bob</td>
+          <td>1200</td>
+        </tr>
+        <tr>
+          <td>Charlie</td>
+          <td>900</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
   <section class="flex flex-col gap-4 md:container-md w-full md:w-auto">
     <h1>We <Heart size="24"></Heart> Svelte</h1>
-
     <div class="flex flex-col md:flex-row gap-4 w-full">
       <div
         class="flex flex-col border border-gray-400 rounded-sm p-4 gap-6 w-full"
@@ -218,4 +236,4 @@
       </div>
     </div>
   </section>
-</div>
+</main>
