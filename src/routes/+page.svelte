@@ -56,13 +56,21 @@
           </div>
         </div>
         {#each htb as item, i}
-          <div class={i > 0 ? "flex border-t" : "flex"}>
+          <div
+            class={i > 0 ? "flex items-center border-t" : "flex items-center"}
+          >
             <p class="p-3 w-full">{item.title}</p>
-            <div class="w-full flex justify-center">
-              <p class="p-3">{item.category}</p>
+
+            <div class="w-full flex justify-center p-3">
+              <p>{item.category}</p>
             </div>
-            <div class="w-full flex justify-end">
-              <p class="p-3">{item.skill}</p>
+            <div class="w-full flex justify-end p-3">
+              <p
+                class={"px-2 py-1 rounded-xl " +
+                  (item.skill == "high" ? "bg-red-700" : "bg-yellow-600")}
+              >
+                {item.skill}
+              </p>
             </div>
           </div>
         {/each}
