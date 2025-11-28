@@ -10,6 +10,7 @@
     chart: {
       type: "bar",
       height: "100px",
+      width: "100%",
       parentHeightOffset: 0,
       sparkline: {
         enabled: true,

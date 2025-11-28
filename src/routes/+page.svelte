@@ -24,12 +24,15 @@
   let commits = data.commits;
   let top_contributors = data.top_contributors;
   let stats = data.stats;
-  console.log("test");
 </script>
 
-<section class="flex justify-center items-center my-12 mx-4">
-  <div class="flex flex-col gap-4">
-    <h1>Svelte github statistics</h1>
+<div
+  aria-label="Svelte github statistics"
+  class="flex justify-center items-center my-12 mx-4 text-xs"
+>
+  <section class="flex flex-col gap-4 md:container-md w-full md:w-auto">
+    <h1>We <Heart size="24"></Heart> Svelte</h1>
+
     <div class="flex flex-col md:flex-row gap-4 w-full">
       <div
         class="flex flex-col border border-gray-400 rounded-sm p-4 gap-6 w-full"
@@ -72,6 +75,7 @@
         </p>
       </div>
     </div>
+
     <div class="flex flex-col md:flex-row gap-4 w-full">
       <div
         class="flex justify-between flex-col border border-gray-400 rounded-sm pt-4 px-4 w-full gap-6"
@@ -205,5 +209,5 @@
         {/each}
       </div>
     </div>
-  </div>
-</section>
+  </section>
+</div>

@@ -19,6 +19,7 @@ body {
 }
 
 svg {
+  display: inline;
   color: oklch(96.7% 0.001 286.375);
 }
 
