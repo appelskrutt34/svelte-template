@@ -3,7 +3,7 @@
   import { browser } from "$app/environment";
 
   let chart;
-  let { data, colors = ["#1d4ed8", "#0e7490"] } = $props();
+  let { data, colors } = $props();
   let chartElement;
 
   const options = {

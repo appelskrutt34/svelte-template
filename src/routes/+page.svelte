@@ -22,6 +22,7 @@
     red,
     yellow,
   } from "$lib/data/constants";
+  import { htb, languages, other } from "$lib/data/skills";
   import Star from "$lib/components/icons/Star.svelte";
   import Eye from "$lib/components/icons/Eye.svelte";
   import Fork from "$lib/components/icons/Fork.svelte";
@@ -41,13 +42,34 @@
 
 <Navbar></Navbar>
 
-<main class="flex flex-col justify-center items-center my-12 mx-4 text-xs">
-  <p>Add Game here</p>
-  <p>...</p>
-  <p>Add Game here</p>
-  <p>...</p>
+<main class="flex flex-col justify-center items-center my-26 mx-4 text-xs">
+  <section class="container w-2xl relative">
+    <BorderBox>
+      <div class="h-96 overflow-scroll flex flex-col">
+        <div class="flex sticky top-0 bg-zinc-100 border-b border-zinc-950">
+          <p class="p-3 w-full">title</p>
+          <div class="w-full flex justify-center">
+            <p class="p-3">category</p>
+          </div>
+          <div class="w-full flex justify-end">
+            <p class="p-3">skill</p>
+          </div>
+        </div>
+        {#each htb as item, i}
+          <div class={i > 0 ? "flex border-t" : "flex"}>
+            <p class="p-3 w-full">{item.title}</p>
+            <div class="w-full flex justify-center">
+              <p class="p-3">{item.category}</p>
+            </div>
+            <div class="w-full flex justify-end">
+              <p class="p-3">{item.skill}</p>
+            </div>
+          </div>
+        {/each}
+      </div>
+    </BorderBox>
+  </section>
 
-  <section></section>
   <section
     id="svelte-github"
     aria-label="Svelte github statistics"
