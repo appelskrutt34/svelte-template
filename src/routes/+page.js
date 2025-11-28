@@ -3,14 +3,16 @@ import {
   getCommits,
   getIssues,
   getPushes,
+  getStats
 } from "$lib/api/git";
 
 export async function load() {
-  const [prs, commits, issues, pushes] = await Promise.all([
+  const [prs, commits, issues, pushes, stats] = await Promise.all([
     getPullRequests(),
     getCommits(),
     getIssues(),
     getPushes(),
+    getStats()
   ]);
 
   return {
@@ -20,5 +22,6 @@ export async function load() {
     opened_prs: prs.opened_by_date,
     closed_prs: prs.closed_by_date,
     commits,
+    stats
   };
 }

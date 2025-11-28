@@ -5,6 +5,13 @@
   display: none !important;
 }
 
+h1 {
+  font-size: 30px;
+}
+h2 {
+  font-size: 25px;
+}
+
 body {
   color: #f4f4f5;
   background-color: oklch(14.1% 0.005 285.823);
