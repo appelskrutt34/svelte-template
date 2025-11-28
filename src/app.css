@@ -13,9 +13,13 @@ h2 {
   font-size: 25px;
 }
 
+button {
+  cursor: pointer;
+}
+
 svg {
   display: inline;
-  color: oklch(96.7% 0.001 286.375);
+  color: #f4f4f5;
 }
 
 .chart-tooltip {
@@ -28,17 +32,16 @@ svg {
 }
 
 body {
-	background-color: #f4f4f5;
+  background-color: #f4f4f5;
   color: #09090b;
   font-family: "roboto mono";
-	transition: background-color 0.3s
+  transition: background-color 0.3s;
 }
 
 body.dark {
-	color: #f4f4f5;
+  color: #f4f4f5;
   background-color: #09090b;
 }
-
 
 @layer utilities {
   .brightness-20 {

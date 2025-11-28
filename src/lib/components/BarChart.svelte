@@ -9,6 +9,7 @@
   const options = {
     chart: {
       type: "bar",
+      width: "100%",
       height: "100px",
       parentHeightOffset: 0,
       sparkline: {

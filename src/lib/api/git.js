@@ -198,6 +198,15 @@ export async function getTopContributors() {
   return contributions_by_date;*/
 }
 export async function getStats(owner, repo) {
+  return {
+    stars: 2300,
+    watchers: 327,
+    forks: 67,
+    openIssues: 43,
+    subscribers: 897,
+    sizeKB: 116743,
+  };
+  /* 
   const res = await fetch(`https://api.github.com/repos/sveltejs/svelte`);
   if (!res.ok) throw new Error(`GitHub API error: ${res.status}`);
   const data = await res.json();
@@ -210,5 +219,5 @@ export async function getStats(owner, repo) {
     sizeKB: data.size,
     createdAt: data.created_at,
     updatedAt: data.updated_at,
-  };
+  };*/
 }
