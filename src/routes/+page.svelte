@@ -24,8 +24,16 @@
   let commits = data.commits;
   let top_contributors = data.top_contributors;
   let stats = data.stats;
+
+  function toggleDarkMode() {
+    window.document.body.classList.toggle("dark");
+  }
 </script>
 
+<button
+  class="absolute top-2 right-2 px-4 py-2 rounded-md bg-zinc-100 dark:text-zinc-800 dark:bg-zinc-100 bg-zinc-800 text-zinc-100 cursor-pointer"
+  on:click={toggleDarkMode}>Toggle Dark Mode</button
+>
 <div
   aria-label="Svelte github statistics"
   class="flex justify-center items-center my-12 mx-4 text-xs"
