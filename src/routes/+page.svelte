@@ -24,6 +24,7 @@
   let commits = data.commits;
   let top_contributors = data.top_contributors;
   let stats = data.stats;
+  console.log("test");
 </script>
 
 <section class="flex justify-center items-center my-12 mx-4">
