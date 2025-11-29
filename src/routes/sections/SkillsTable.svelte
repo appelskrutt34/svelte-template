@@ -36,7 +36,7 @@
   }
 </script>
 
-<section class="relative w-full gap-4 flex flex-col">
+<section id="skills" class="relative w-full gap-4 flex flex-col">
   <h1>Technical Skills</h1>
   <div class="relative">
     <input

@@ -46,17 +46,12 @@
           <button
             onclick={() => {
               scrollInto("svelte-github");
-            }}>svelte</button
-          >
-          <button
-            onclick={() => {
-              scrollInto("HTB");
-            }}>HTB</button
+            }}>Svelte</button
           >
           <button
             onclick={() => {
               scrollInto("skills");
-            }}>skills</button
+            }}>Skills</button
           >
         </div>
 
@@ -102,25 +97,13 @@
             onclick={() => {
               openMenu = false;
               scrollInto("svelte-github");
-            }}>svelte</button
-          >
-          <button
-            onclick={() => {
-              openMenu = false;
-              scrollInto("HTB");
-            }}>HTB</button
+            }}>Svelte</button
           >
           <button
             onclick={() => {
               openMenu = false;
               scrollInto("skills");
-            }}>skills</button
-          >
-          <button
-            onclick={() => {
-              openMenu = false;
-              scrollInto("projects");
-            }}>hobby projects</button
+            }}>Skills</button
           >
         </div>
       {/if}
@@ -143,17 +126,12 @@
           <button
             onclick={() => {
               scrollInto("svelte-github");
-            }}>svelte</button
-          >
-          <button
-            onclick={() => {
-              scrollInto("HTB");
-            }}>HTB</button
+            }}>Svelte</button
           >
           <button
             onclick={() => {
               scrollInto("skills");
-            }}>skills</button
+            }}>Skills</button
           >
         </div>
 
@@ -201,19 +179,13 @@
             onclick={() => {
               openMenu = false;
               scrollInto("svelte-github");
-            }}>svelte</button
-          >
-          <button
-            onclick={() => {
-              openMenu = false;
-              scrollInto("HTB");
-            }}>HTB</button
+            }}>Svelte</button
           >
           <button
             onclick={() => {
               openMenu = false;
               scrollInto("skills");
-            }}>skills</button
+            }}>Skills</button
           >
         </div>
       {/if}
