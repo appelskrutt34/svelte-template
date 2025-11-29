@@ -1,7 +1,7 @@
 const high = "High";
 const medium = "Medium";
 const web_security = "Web Security";
-const tool = "Tool";
+const hosting = "Hosting";
 const language = "Programming Language";
 const devops = "DevOps / CI/CD";
 const backend = "Backend Framework";
@@ -57,6 +57,7 @@ export const skills = [
   { skill: "Github Actions", category: devops, proficiency: high },
   { skill: "Linux", category: "Operating System", proficiency: high },
   { skill: "Tailwind", category: "Styling Framework", proficiency: high },
+  { skill: "IIS", category: hosting, proficiency: high },
 ];
 
 
