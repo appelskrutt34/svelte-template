@@ -92,21 +92,29 @@
 
       {#each filtered_skills as item, i}
         <div class="flex border-b border-zinc-900 dark:border-zinc-100">
-          <div class="flex-1 p-3">{item.skill}</div>
-
-          <div
-            class="hidden md:flex flex-1 p-3 text-center border-r border-l border-zinc-900 dark:border-zinc-100"
-          >
-            {item.category}
+          <div class="flex-1">
+            <p class="w-full text-left p-3">
+              {item.skill}
+            </p>
           </div>
-
-          <div class="flex-1 p-3 text-right">
-            <span
-              class={"px-2 py-1 rounded-xl " +
-                (item.proficiency == "High" ? "bg-green-700" : "bg-yellow-600")}
-            >
-              {item.proficiency}
-            </span>
+          <div
+            class="hidden md:flex flex-1 border-r border-l border-zinc-900 dark:border-zinc-100"
+          >
+            <p class="w-full text-center p-3">
+              {item.category}
+            </p>
+          </div>
+          <div class="flex-1">
+            <p class="w-full text-right p-3">
+              <span
+                class={"rounded-2xl px-4 py-2 " +
+                  (item.proficiency == "High"
+                    ? " bg-green-700"
+                    : " bg-yellow-600")}
+              >
+                {item.proficiency}</span
+              >
+            </p>
           </div>
         </div>
       {/each}

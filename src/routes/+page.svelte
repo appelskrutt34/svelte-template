@@ -9,7 +9,7 @@
 <Navbar></Navbar>
 
 <main
-  class="flex flex-col justify-center items-center my-26 mx-4 text-xs max-w-4xl mx-auto gap-22 px-6"
+  class="flex flex-col justify-center items-center my-26 text-xs max-w-5xl mx-auto gap-22 px-6"
 >
   <SkillsTable></SkillsTable>
   <Svelte data={$page.data}></Svelte>

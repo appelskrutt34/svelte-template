@@ -26,7 +26,7 @@
   });
 </script>
 
-<a href="#main" class="opacity-0" aria-label="Skip to main content"></a>
+<a href="#main" class="sr-only focus:not-sr-only p-2"> Skip to main content </a>
 <header class="fixed w-full top-0 z-20">
   {#if y < 50}
     <!-- Monitor -->
@@ -35,7 +35,7 @@
       class="w-full justify-center hidden md:flex bg-zinc-100 text-zinc-900 dark:text-zinc-100 dark:bg-zinc-900"
     >
       <nav
-        class="container gap-6 md:gap-0 flex flex-col md:flex-row justify-between py-6 px-4"
+        class="max-w-5xl w-full gap-6 md:gap-0 flex flex-col md:flex-row justify-between p-6"
       >
         <div class="flex gap-8">
           <a
@@ -60,7 +60,7 @@
           >
         </div>
 
-        <button onclick={toggleDarkMode}
+        <button onclick={toggleDarkMode} aria-pressed={$isDarkMode}
           >{#if $isDarkMode}<ToggleOn color={white}></ToggleOn>{:else}<ToggleOff
               color={black}
             ></ToggleOff>{/if} Dark Mode
@@ -70,15 +70,16 @@
     <!-- Mobile -->
     <nav in:fade class="md:hidden w-full">
       <div
-        class="flex justify-between py-6 px-4 bg-zinc-100 text-zinc-900 dark:text-zinc-100 dark:bg-zinc-900"
+        class="flex justify-between p-6 bg-zinc-100 text-zinc-900 dark:text-zinc-100 dark:bg-zinc-900"
       >
-        <button onclick={toggleDarkMode}
+        <button onclick={toggleDarkMode} aria-pressed={$isDarkMode}
           >{#if $isDarkMode}<ToggleOn color={white}></ToggleOn>{:else}<ToggleOff
               color={black}
             ></ToggleOff>{/if} Dark Mode
         </button>
         <button
           aria-label="Toggle main menu"
+          aria-expanded={openMenu}
           onclick={() => {
             openMenu = !openMenu;
           }}
@@ -131,8 +132,7 @@
       class="w-full bg-zinc-900 text-zinc-100 dark:text-zinc-900 dark:bg-zinc-100 justify-center border-b hidden md:flex"
     >
       <nav
-        class="container gap-6 md:gap-0 flex flex-col md:flex-row justify-between py-6 px-4"
-        aria-label="Main navigation"
+        class="max-w-5xl w-full gap-6 md:gap-0 flex flex-col md:flex-row justify-between p-6"
       >
         <div class="flex gap-8">
           <a
@@ -157,7 +157,7 @@
           >
         </div>
 
-        <button onclick={toggleDarkMode}
+        <button onclick={toggleDarkMode} aria-pressed={$isDarkMode}
           >{#if $isDarkMode}<ToggleOn color={black}></ToggleOn>{:else}<ToggleOff
               color={white}
             ></ToggleOff>{/if} Dark Mode
@@ -170,14 +170,15 @@
       class="md:hidden w-full bg-zinc-900 text-zinc-100 dark:bg-zinc-100 dark:text-zinc-900"
       aria-label="Main mobile navigation"
     >
-      <div class="container flex justify-between py-6 px-4">
-        <button onclick={toggleDarkMode}
+      <div class="container flex justify-between p-6">
+        <button onclick={toggleDarkMode} aria-pressed={$isDarkMode}
           >{#if $isDarkMode}<ToggleOn color={black}></ToggleOn>{:else}<ToggleOff
               color={white}
             ></ToggleOff>{/if} Dark Mode
         </button>
         <button
           aria-label="Toggle main menu"
+          aria-expanded={openMenu}
           onclick={() => {
             openMenu = !openMenu;
           }}

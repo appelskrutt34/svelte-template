@@ -70,7 +70,9 @@
         </p>
       </div>
     </BorderBox>
+  </div>
 
+  <div class="flex flex-col md:flex-row gap-4 w-full">
     <BorderBox>
       <div class="flex flex-col p-4 gap-6">
         <p class="flex gap-1 items-center">
