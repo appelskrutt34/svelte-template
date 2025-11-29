@@ -1,62 +1,62 @@
-const high = "high";
-const medium = "medium";
-const technique = "technique";
-const tool = "tool";
-const language = "language";
+const high = "High";
+const medium = "Medium";
+const web_security = "Web Security";
+const tool = "Tool";
+const language = "Programming Language";
+const devops = "DevOps / CI/CD";
+const backend = "Backend Framework";
+const frontend = "Frontend Framework";
+const markup = "Markup / Style Language";
 
-export const htb = [
-  { title: "Type Juggling", category: technique, skill: high },
-  { title: "Prototype Pollution", category: technique, skill: high },
-  { title: "Timing Attacks", category: technique, skill: high },
-  { title: "Race Conditions", category: technique, skill: high },
-  { title: "Deserialization Attacks", category: technique, skill: high },
-  { title: "Parameter Logic Bugs", category: technique, skill: high },
-  { title: "Blind SQL Injections", category: technique, skill: high },
-  { title: "Boolean-Based SQL Injections", category: technique, skill: high },
-  { title: "Time-Based SQL Injections", category: technique, skill: high },
-  { title: "Error-Based SQL Injections", category: technique, skill: high },
-  { title: "DNS Rebinding", category: technique, skill: high },
-  { title: "IDOR", category: technique, skill: high },
-  { title: "Websocket Attacks", category: technique, skill: medium },
-  { title: "CRLF Injection", category: technique, skill: high },
-  { title: "HTTP Request Smuggling", category: technique, skill: high },
-  { title: "HTTP/2 Downgrading", category: technique, skill: high },
-  { title: "Web Cache Poisoning", category: technique, skill: high },
-  { title: "Host Header Attacks", category: technique, skill: high },
-  { title: "Session Puzzling", category: technique, skill: high },
-  { title: "XSS", category: technique, skill: high },
-  { title: "JWT Attacks", category: technique, skill: high },
-  { title: "OAuth Attacks", category: technique, skill: medium },
-  { title: "SAML Attacks", category: technique, skill: medium },
-  { title: "NOSQL Injections", category: technique, skill: high },
-  { title: "XPath Injections", category: technique, skill: high },
-  { title: "LDAP Injections", category: technique, skill: high },
-  { title: "BurpSuit", category: tool, skill: high },
-  { title: "Kali Linux", category: tool, skill: high },
-  { title: "ffuf", category: tool, skill: high },
-  { title: "wfuzz", category: tool, skill: high },
+export const skills = [
+  { skill: "Type Juggling", category: web_security, proficiency: high },
+  { skill: "Prototype Pollution", category: web_security, proficiency: high },
+  { skill: "Timing Attacks", category: web_security, proficiency: high },
+  { skill: "Race Conditions", category: web_security, proficiency: high },
+  { skill: "Deserialization Attacks", category: web_security, proficiency: high },
+  { skill: "Parameter Logic Bugs", category: web_security, proficiency: high },
+  { skill: "Blind SQL Injections", category: web_security, proficiency: high },
+  { skill: "Boolean-Based SQL Injections", category: web_security, proficiency: high },
+  { skill: "Time-Based SQL Injections", category: web_security, proficiency: high },
+  { skill: "Error-Based SQL Injections", category: web_security, proficiency: high },
+  { skill: "DNS Rebinding", category: web_security, proficiency: high },
+  { skill: "IDOR", category: web_security, proficiency: high },
+  { skill: "Websocket Attacks", category: web_security, proficiency: medium },
+  { skill: "CRLF Injection", category: web_security, proficiency: high },
+  { skill: "HTTP Request Smuggling", category: web_security, proficiency: high },
+  { skill: "HTTP/2 Downgrading", category: web_security, proficiency: high },
+  { skill: "Web Cache Poisoning", category: web_security, proficiency: high },
+  { skill: "Host Header Attacks", category: web_security, proficiency: high },
+  { skill: "Session Puzzling", category: web_security, proficiency: high },
+  { skill: "XSS", category: web_security, proficiency: high },
+  { skill: "JWT Attacks", category: web_security, proficiency: high },
+  { skill: "OAuth Attacks", category: web_security, proficiency: medium },
+  { skill: "SAML Attacks", category: web_security, proficiency: medium },
+  { skill: "NOSQL Injections", category: web_security, proficiency: high },
+  { skill: "XPath Injections", category: web_security, proficiency: high },
+  { skill: "LDAP Injections", category: web_security, proficiency: high },
+  { skill: "BurpSuit", category: web_security, proficiency: high },
+  { skill: "Kali Linux", category: web_security, proficiency: high },
+  { skill: "Ffuf", category: web_security, proficiency: high },
+  { skill: "Wfuzz", category: web_security, proficiency: high },
+  { skill: "C#", category: language, proficiency: high },
+  { skill: "JavaScript", category: language, proficiency: high },
+  { skill: "SQL", category: language, proficiency: medium },
+  { skill: "Python", category: language, proficiency: medium },
+  { skill: "Solidity", category: language, proficiency: medium },
+  { skill: "HTML", category: markup, proficiency: high },
+  { skill: "CSS", category: markup, proficiency: high },
+   { skill: "Svelte", category: frontend, proficiency: high },
+  { skill: "Vue", category: frontend, proficiency: medium },
+  { skill: "React", category: frontend, proficiency: medium },
+  { skill: ".NET", category: backend, proficiency: high },
+  { skill: ".NET Core", category: backend, proficiency: high },
+  { skill: "ASP.NET", category: backend, proficiency: high },
+  { skill: "ASP.NET Core", category: backend, proficiency: high },
+  { skill: "Azure DevOps", category: devops, proficiency: high },
+  { skill: "Github Actions", category: devops, proficiency: high },
+  { skill: "Linux", category: "Operating System", proficiency: high },
+  { skill: "Tailwind", category: "Styling Framework", proficiency: high },
 ];
 
-export const languages = [
-  { title: "C#", category: language, skill: high },
-  { title: "JavaScript", category: language, skill: high },
-  { title: "SQL", category: language, skill: medium },
-  { title: "Python", category: language, skill: medium },
-  { title: "Solidity", category: language, skill: medium },
-  { title: "HTML", category: language, skill: high },
-  { title: "CSS", category: language, skill: high },
-];
 
-export const other = [
-  { title: "Svelte", category: tool, skill: high },
-  { title: "Vue", category: tool, skill: medium },
-  { title: "React", category: tool, skill: medium },
-  { title: ".NET", category: tool, skill: high },
-  { title: ".NET Core", category: tool, skill: high },
-  { title: "ASP.NET", category: tool, skill: high },
-  { title: "ASP.NET Core", category: tool, skill: high },
-  { title: "Azure Devops", category: tool, skill: high },
-  { title: "Github Actions", category: tool, skill: high },
-  { title: "Linux", category: tool, skill: high },
-  { title: "Tailwind", category: tool, skill: high },
-];

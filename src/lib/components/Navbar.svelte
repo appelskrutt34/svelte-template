@@ -32,7 +32,7 @@
     <!-- Monitor -->
     <div
       in:fade
-      class="w-full justify-center hidden md:flex bg-zinc-100 text-zinc-950 dark:text-zinc-100 dark:bg-zinc-950"
+      class="w-full justify-center hidden md:flex bg-zinc-100 text-zinc-900 dark:text-zinc-100 dark:bg-zinc-900"
     >
       <nav
         class="container gap-6 md:gap-0 flex flex-col md:flex-row justify-between py-6 px-4"
@@ -70,7 +70,7 @@
     <!-- Mobile -->
     <nav in:fade class="md:hidden w-full">
       <div
-        class="flex justify-between py-6 px-4 bg-zinc-100 text-zinc-950 dark:text-zinc-100 dark:bg-zinc-950"
+        class="flex justify-between py-6 px-4 bg-zinc-100 text-zinc-900 dark:text-zinc-100 dark:bg-zinc-900"
       >
         <button onclick={toggleDarkMode}
           >{#if $isDarkMode}<ToggleOn color={white}></ToggleOn>{:else}<ToggleOff
@@ -94,7 +94,7 @@
         <div
           in:slide={{ y: -10, duration: 300 }}
           out:slide={{ y: -10, duration: 300 }}
-          class="w-full text-center pb-4 flex flex-col gap-4 bg-zinc-100 text-zinc-950 dark:text-zinc-100 dark:bg-zinc-950"
+          class="w-full text-center pb-4 flex flex-col gap-4 bg-zinc-100 text-zinc-900 dark:text-zinc-100 dark:bg-zinc-900"
           style="margin-top: -1px"
         >
           <button
@@ -128,7 +128,7 @@
     <!-- Monitor -->
     <div
       in:fade
-      class="w-full bg-zinc-950 text-zinc-100 dark:text-zinc-950 dark:bg-zinc-100 justify-center border-b hidden md:flex"
+      class="w-full bg-zinc-900 text-zinc-100 dark:text-zinc-900 dark:bg-zinc-100 justify-center border-b hidden md:flex"
     >
       <nav
         class="container gap-6 md:gap-0 flex flex-col md:flex-row justify-between py-6 px-4"
@@ -167,7 +167,7 @@
     <!-- Mobile -->
     <nav
       in:fade
-      class="md:hidden w-full bg-zinc-950 text-zinc-100 dark:bg-zinc-100 dark:text-zinc-950"
+      class="md:hidden w-full bg-zinc-900 text-zinc-100 dark:bg-zinc-100 dark:text-zinc-900"
       aria-label="Main mobile navigation"
     >
       <div class="container flex justify-between py-6 px-4">

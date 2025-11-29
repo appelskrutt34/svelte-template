@@ -1,12 +1,13 @@
 <script>
-  let { color } = $props();
+  let { color, size = 12 } = $props();
 </script>
 
 <svg
   xmlns="http://www.w3.org/2000/svg"
   viewBox="0 0 640 640"
-  width="12"
-  height="12"
+  width={size}
+  height={size}
+  class={color === undefined ? "fill-zinc-900 dark:fill-zinc-100" : ""}
   ><!--!Font Awesome Free v7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--><path
     fill={color}
     d="M64 320C64 178.6 178.6 64 320 64C461.4 64 576 178.6 576 320C576 461.4 461.4 576 320 576C178.6 576 64 461.4 64 320z"
