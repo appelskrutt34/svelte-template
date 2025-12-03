@@ -1,3 +1,10 @@
-<div class="border border-zinc-900 dark:border-zinc-100 rounded-sm w-full">
+<script>
+  let { customClass } = $props();
+</script>
+
+<div
+  class={customClass +
+    " rounded-sm border border-zinc-900 dark:border-zinc-100  w-full"}
+>
   <slot></slot>
 </div>
