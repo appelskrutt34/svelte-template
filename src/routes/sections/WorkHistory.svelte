@@ -142,7 +142,7 @@
 
 <section class="flex flex-col gap-4" id="work-history">
   <h1>
-    <Heart customClass="animate-bounce fill-green-700 mr-2" size="24"
+    <Heart customClass="animate-bounce fill-green-600 mr-2" size="24"
     ></Heart>Work History
   </h1>
   <div class="flex flex-col md:flex-row gap-6">
@@ -161,7 +161,7 @@
 
         {#each jobs[0].skills as skill}
           <p
-            class="inline-flex items-center gap-1 px-2 py-1 mr-2 mb-2 text-zinc-900 bg-green-700 border border-zinc-900 dark:border-zinc-100 dark:text-zinc-100 rounded-2xl text-xs"
+            class="inline-flex items-center gap-1 px-2 py-1 mr-2 mb-2 text-zinc-900 bg-green-600 border border-zinc-900 dark:border-zinc-100 dark:text-zinc-100 rounded-2xl text-xs"
           >
             {skill}
           </p>
@@ -183,7 +183,7 @@
 
         {#each jobs[1].skills as skill}
           <p
-            class="inline-flex items-center gap-1 px-2 py-1 mr-2 mb-2 text-zinc-900 bg-green-700 border border-zinc-900 dark:border-zinc-100 dark:text-zinc-100 rounded-2xl text-xs"
+            class="inline-flex items-center gap-1 px-2 py-1 mr-2 mb-2 text-zinc-900 bg-green-600 border border-zinc-900 dark:border-zinc-100 dark:text-zinc-100 rounded-2xl text-xs"
           >
             {skill}
           </p>
@@ -207,7 +207,7 @@
 
         {#each jobs[2].skills as skill}
           <p
-            class="inline-flex items-center gap-1 px-2 py-1 mr-2 mb-2 text-zinc-900 bg-green-700 border border-zinc-900 dark:border-zinc-100 dark:text-zinc-100 rounded-2xl text-xs"
+            class="inline-flex items-center gap-1 px-2 py-1 mr-2 mb-2 text-zinc-900 bg-green-600 border border-zinc-900 dark:border-zinc-100 dark:text-zinc-100 rounded-2xl text-xs"
           >
             {skill}
           </p>
@@ -227,7 +227,7 @@
 
         {#each jobs[3].skills as skill}
           <p
-            class="inline-flex items-center gap-1 px-2 py-1 mr-2 mb-2 text-zinc-900 bg-green-700 border border-zinc-900 dark:border-zinc-100 dark:text-zinc-100 rounded-2xl text-xs"
+            class="inline-flex items-center gap-1 px-2 py-1 mr-2 mb-2 text-zinc-900 bg-green-600 border border-zinc-900 dark:border-zinc-100 dark:text-zinc-100 rounded-2xl text-xs"
           >
             {skill}
           </p>
@@ -248,7 +248,7 @@
 
       {#each jobs[4].skills as skill}
         <p
-          class="inline-flex items-center gap-1 px-2 py-1 mr-2 mb-2 text-zinc-900 bg-green-700 border border-zinc-900 dark:border-zinc-100 dark:text-zinc-100 rounded-2xl text-xs"
+          class="inline-flex items-center gap-1 px-2 py-1 mr-2 mb-2 text-zinc-900 bg-green-600 border border-zinc-900 dark:border-zinc-100 dark:text-zinc-100 rounded-2xl text-xs"
         >
           {skill}
         </p>

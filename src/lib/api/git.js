@@ -1,12 +1,51 @@
-import {
-  opened_issues,
-  closed_issues,
-  commits,
-  pushes,
-  pull_requests_opened,
-  pull_requests_closed,
-  top_contributors,
-} from "$lib/data/stats";
+const pull_requests_opened = [
+  0, 0, 1, 5, 2, 1, 7, 6, 9, 2, 2, 3, 0, 1, 0, 0, 4, 3, 7, 2, 1, 0, 1, 1, 2, 0,
+  3, 1, 2, 1,
+];
+const pull_requests_closed = [
+  1, 1, 2, 3, 2, 0, 7, 9, 8, 10, 2, 10, 1, 4, 7, 7, 4, 3, 2, 2, 5, 0, 1, 3, 2,
+  0, 7, 8, 4, 1,
+];
+const opened_issues = [
+  0, 0, 0, 1, 0, 1, 2, 0, 0, 1, 2, 1, 0, 4, 2, 7, 0, 0, 1, 2, 1, 1, 1, 1, 2, 0,
+  3, 1, 1, 1,
+];
+const closed_issues = [
+  2, 2, 1, 0, 1, 0, 0, 1, 2, 4, 6, 2, 6, 6, 8, 7, 3, 0, 0, 1, 0, 0, 2, 3, 2, 0,
+  8, 5, 5, 2,
+];
+const pushes = [
+  4, 4, 7, 9, 1, 1, 12, 10, 3, 16, 16, 19, 15, 10, 8, 8, 9, 15, 17, 22, 3, 4,
+  14, 19, 18, 16, 5, 7, 9, 5,
+];
+const commits = [
+  10, 17, 12, 17, 21, 10, 11, 12, 19, 14, 14, 17, 15, 20, 12, 16, 11, 19, 18,
+  22, 9, 8, 11, 22, 23, 14, 19, 7, 8, 3,
+];
+const top_contributors = [
+  {
+    name: "0xDev42",
+    contributions: [
+      10, 17, 0, 0, 21, 10, 0, 0, 19, 0, 0, 1, 5, 2, 12, 16, 11, 9, 8, 2, 9, 8,
+      0, 0, 3, 4, 19, 7, 8, 3,
+    ],
+  },
+  {
+    name: "CodeNinja1337",
+    contributions: [
+      17, 7, 0, 13, 27, 14, 10, 2, 13, 10, 0, 1, 5, 2, 12, 16, 11, 9, 8, 2, 9,
+      8, 0, 1, 0, 0, 9, 17, 18, 13,
+    ],
+  },
+  {
+    name: "HashKing",
+    contributions: [
+      4, 7, 4, 14, 21, 10, 32, 22, 19, 26, 43, 32, 5, 0, 0, 16, 11, 28, 28, 2,
+      4, 17, 13, 2, 7, 4, 9, 17, 18, 3,
+    ],
+  },
+];
+
 export async function getCommits() {
   return await commits;
   /*

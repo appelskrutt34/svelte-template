@@ -1,6 +1,5 @@
 <script>
   import { fade, slide } from "svelte/transition";
-  import { black, white } from "$lib/data/constants";
   import Menu from "$lib/components/icons/Menu.svelte";
   import Close from "$lib/components/icons/Close.svelte";
   import Linkedin from "./icons/Linkedin.svelte";
@@ -41,7 +40,9 @@
           <a
             href="https://www.linkedin.com/in/ebba-svensson-6a295b187/"
             aria-label="Linkedin"
-            ><Linkedin color={$isDarkMode ? white : black}></Linkedin></a
+            ><Linkedin
+              customClass={$isDarkMode ? "fill-zinc-100" : "fill-zinc-900"}
+            ></Linkedin></a
           >
           <button
             onclick={() => {
@@ -61,8 +62,8 @@
         </div>
 
         <button onclick={toggleDarkMode} aria-pressed={$isDarkMode}
-          >{#if $isDarkMode}<ToggleOn color={white}></ToggleOn>{:else}<ToggleOff
-              color={black}
+          >{#if $isDarkMode}<ToggleOn customClass="fill-zinc-100"
+            ></ToggleOn>{:else}<ToggleOff customClass="fill-zinc-900"
             ></ToggleOff>{/if} Dark Mode
         </button>
       </nav>
@@ -73,8 +74,8 @@
         class="flex justify-between p-6 bg-zinc-100 text-zinc-900 dark:text-zinc-100 dark:bg-zinc-900"
       >
         <button onclick={toggleDarkMode} aria-pressed={$isDarkMode}
-          >{#if $isDarkMode}<ToggleOn color={white}></ToggleOn>{:else}<ToggleOff
-              color={black}
+          >{#if $isDarkMode}<ToggleOn customClass="fill-zinc-100"
+            ></ToggleOn>{:else}<ToggleOff customClass="fill-zinc-900"
             ></ToggleOff>{/if} Dark Mode
         </button>
         <button
@@ -85,9 +86,11 @@
           }}
         >
           {#if openMenu}
-            <Close color={$isDarkMode ? white : black}></Close>
+            <Close customClass={$isDarkMode ? "fill-zinc-100" : "fill-zinc-900"}
+            ></Close>
           {:else}
-            <Menu color={$isDarkMode ? white : black}></Menu>
+            <Menu customClass={$isDarkMode ? "fill-zinc-100" : "fill-zinc-900"}
+            ></Menu>
           {/if}
         </button>
       </div>
@@ -132,7 +135,9 @@
           <a
             href="https://www.linkedin.com/in/ebba-svensson-6a295b187/"
             aria-label="Linkedin"
-            ><Linkedin color={$isDarkMode ? black : white}></Linkedin></a
+            ><Linkedin
+              customClass={$isDarkMode ? "fill-zinc-900" : "fill-zinc-100"}
+            ></Linkedin></a
           >
           <button
             onclick={() => {
@@ -152,8 +157,8 @@
         </div>
 
         <button onclick={toggleDarkMode} aria-pressed={$isDarkMode}
-          >{#if $isDarkMode}<ToggleOn color={black}></ToggleOn>{:else}<ToggleOff
-              color={white}
+          >{#if $isDarkMode}<ToggleOn customClass="fill-zinc-900"
+            ></ToggleOn>{:else}<ToggleOff customClass="fill-zinc-100"
             ></ToggleOff>{/if} Dark Mode
         </button>
       </nav>
@@ -166,8 +171,8 @@
     >
       <div class="container flex justify-between p-6">
         <button onclick={toggleDarkMode} aria-pressed={$isDarkMode}
-          >{#if $isDarkMode}<ToggleOn color={black}></ToggleOn>{:else}<ToggleOff
-              color={white}
+          >{#if $isDarkMode}<ToggleOn customClass="fill-zinc-900"
+            ></ToggleOn>{:else}<ToggleOff customClass="fill-zinc-100"
             ></ToggleOff>{/if} Dark Mode
         </button>
         <button
@@ -178,9 +183,11 @@
           }}
         >
           {#if openMenu}
-            <Close color={$isDarkMode ? black : white}></Close>
+            <Close customClass={$isDarkMode ? "fill-zinc-900" : "fill-zinc-100"}
+            ></Close>
           {:else}
-            <Menu color={$isDarkMode ? black : white}></Menu>
+            <Menu customClass={$isDarkMode ? "fill-zinc-900" : "fill-zinc-100"}
+            ></Menu>
           {/if}
         </button>
       </div>

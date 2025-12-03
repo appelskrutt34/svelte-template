@@ -20,7 +20,7 @@
 </script>
 
 <div
-  role="tooltip"
+  aria-hidden="true"
   onmouseover={mouseOver}
   onmouseleave={mouseLeave}
   onmousemove={mouseMove}

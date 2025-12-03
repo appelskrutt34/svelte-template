@@ -99,9 +99,8 @@
   let filtered_skills = $state(skills);
   let current_sort = $state(null);
 
-  onMount(() => {
-    sortByCategory();
-  });
+  sortByCategory();
+
   function search(value) {
     filtered_skills = skills.filter(
       (item) =>
@@ -132,7 +131,7 @@
 
 <section id="skills" class="relative w-full gap-4 flex flex-col">
   <h1>
-    <Heart customClass="animate-bounce fill-green-700 mr-2" size="24"
+    <Heart customClass="animate-bounce fill-green-600 mr-2" size="24"
     ></Heart>Technical Skills
   </h1>
   <div class="relative">
@@ -206,7 +205,7 @@
               <span
                 class={"rounded-2xl px-2 py-1 border border-zinc-900 dark:border-zinc-100 " +
                   (item.proficiency == "High"
-                    ? " bg-green-700"
+                    ? " bg-green-600"
                     : " bg-yellow-600")}
               >
                 {item.proficiency}</span

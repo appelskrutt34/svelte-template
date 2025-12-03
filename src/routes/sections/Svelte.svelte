@@ -13,18 +13,17 @@
   import Heart from "$lib/components/icons/Heart.svelte";
   import PullRequest from "$lib/components/icons/PullRequest.svelte";
   import BarChart from "$lib/components/BarChart.svelte";
-  import {
-    black,
-    white,
-    pink,
-    purple,
-    blue,
-    green,
-    cyan,
-    orange,
-    red,
-    yellow,
-  } from "$lib/data/constants";
+
+  const black = "#09090b";
+  const white = "#f4f4f5";
+  const pink = "#be185d";
+  const purple = "#6d28d9";
+  const blue = "#1d4ed8";
+  const cyan = "#0e7490";
+  const green = "#15803d";
+  const orange = "#ea580c";
+  const red = "#be123c";
+  const yellow = "#ca8a04";
 
   let { data } = $props();
   let opened_issues = data.opened_issues;
