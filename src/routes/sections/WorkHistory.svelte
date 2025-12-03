@@ -85,7 +85,7 @@
         "Developed data tables displaying real-time mining statistics such as hash rate, block height, and active miners.",
         "Created pages listing all blockchain nodes and their associated metadata.",
         "Built interactive charts using ApexCharts.",
-        "Contributed to various frontend tasks in the company’s crypto wallet and chat application.",
+        "Contributed to various frontend tasks in the company's crypto wallet and chat application.",
       ],
     },
     {
@@ -161,7 +161,7 @@
 
         {#each jobs[0].skills as skill}
           <p
-            class="inline-flex items-center gap-1 px-2 py-1 mr-2 mb-2 text-zinc-900 bg-green-600 border border-zinc-900 dark:border-zinc-100 dark:text-zinc-100 rounded-2xl text-xs"
+            class="inline-flex items-center gap-1 px-2 py-1 mr-2 mb-2 text-zinc-900 bg-green-600 dark:bg-green-800 dark:bg-green-800 border border-zinc-900 dark:border-zinc-100 dark:text-zinc-100 rounded-2xl text-xs"
           >
             {skill}
           </p>
@@ -183,7 +183,7 @@
 
         {#each jobs[1].skills as skill}
           <p
-            class="inline-flex items-center gap-1 px-2 py-1 mr-2 mb-2 text-zinc-900 bg-green-600 border border-zinc-900 dark:border-zinc-100 dark:text-zinc-100 rounded-2xl text-xs"
+            class="inline-flex items-center gap-1 px-2 py-1 mr-2 mb-2 text-zinc-900 bg-green-600 dark:bg-green-800 border border-zinc-900 dark:border-zinc-100 dark:text-zinc-100 rounded-2xl text-xs"
           >
             {skill}
           </p>
@@ -207,7 +207,7 @@
 
         {#each jobs[2].skills as skill}
           <p
-            class="inline-flex items-center gap-1 px-2 py-1 mr-2 mb-2 text-zinc-900 bg-green-600 border border-zinc-900 dark:border-zinc-100 dark:text-zinc-100 rounded-2xl text-xs"
+            class="inline-flex items-center gap-1 px-2 py-1 mr-2 mb-2 text-zinc-900 bg-green-600 dark:bg-green-800 border border-zinc-900 dark:border-zinc-100 dark:text-zinc-100 rounded-2xl text-xs"
           >
             {skill}
           </p>
@@ -227,7 +227,7 @@
 
         {#each jobs[3].skills as skill}
           <p
-            class="inline-flex items-center gap-1 px-2 py-1 mr-2 mb-2 text-zinc-900 bg-green-600 border border-zinc-900 dark:border-zinc-100 dark:text-zinc-100 rounded-2xl text-xs"
+            class="inline-flex items-center gap-1 px-2 py-1 mr-2 mb-2 text-zinc-900 bg-green-600 dark:bg-green-800 border border-zinc-900 dark:border-zinc-100 dark:text-zinc-100 rounded-2xl text-xs"
           >
             {skill}
           </p>
@@ -248,7 +248,7 @@
 
       {#each jobs[4].skills as skill}
         <p
-          class="inline-flex items-center gap-1 px-2 py-1 mr-2 mb-2 text-zinc-900 bg-green-600 border border-zinc-900 dark:border-zinc-100 dark:text-zinc-100 rounded-2xl text-xs"
+          class="inline-flex items-center gap-1 px-2 py-1 mr-2 mb-2 text-zinc-900 bg-green-600 dark:bg-green-800 border border-zinc-900 dark:border-zinc-100 dark:text-zinc-100 rounded-2xl text-xs"
         >
           {skill}
         </p>

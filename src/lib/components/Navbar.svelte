@@ -38,6 +38,7 @@
       >
         <div class="flex gap-8">
           <a
+            class="hover:scale-125 transition-transform duration-300"
             href="https://www.linkedin.com/in/ebba-svensson-6a295b187/"
             aria-label="Linkedin"
             ><Linkedin
@@ -45,25 +46,42 @@
             ></Linkedin></a
           >
           <button
+            class="group"
             onclick={() => {
               scrollInto("svelte-github");
-            }}>Svelte</button
+            }}
+            >Svelte
+            <div
+              class="bg-zinc-900 dark:bg-zinc-100 h-0.5 w-0 group-hover:w-full transition-all duration-300 rounded-sm"
+            ></div></button
           >
           <button
+            class="group"
             onclick={() => {
               scrollInto("skills");
-            }}>Skills</button
+            }}
+            >Skills
+            <div
+              class="bg-zinc-900 dark:bg-zinc-100 h-0.5 w-0 group-hover:w-full transition-all duration-300 rounded-sm"
+            ></div></button
           >
           <button
+            class="group"
             onclick={() => {
               scrollInto("work-history");
-            }}>Work History</button
+            }}
+            >Work History
+            <div
+              class="bg-zinc-900 dark:bg-zinc-100 h-0.5 w-0 group-hover:w-full transition-all duration-300 rounded-sm"
+            ></div></button
           >
         </div>
 
         <button onclick={toggleDarkMode} aria-pressed={$isDarkMode}
-          >{#if $isDarkMode}<ToggleOn customClass="fill-zinc-100"
-            ></ToggleOn>{:else}<ToggleOff customClass="fill-zinc-900"
+          >{#if $isDarkMode}<ToggleOn
+              customClass="fill-zinc-100 hover:scale-125 transition-transform duration-300"
+            ></ToggleOn>{:else}<ToggleOff
+              customClass="fill-zinc-900 hover:scale-125 transition-transform duration-300"
             ></ToggleOff>{/if} Dark Mode
         </button>
       </nav>
@@ -140,19 +158,34 @@
             ></Linkedin></a
           >
           <button
+            class="group"
             onclick={() => {
               scrollInto("svelte-github");
-            }}>Svelte</button
+            }}
+            >Svelte
+            <div
+              class="bg-zinc-100 dark:bg-zinc-900 h-0.5 w-0 group-hover:w-full transition-all duration-300 rounded-sm"
+            ></div></button
           >
           <button
+            class="group"
             onclick={() => {
               scrollInto("skills");
-            }}>Skills</button
+            }}
+            >Skills
+            <div
+              class="bg-zinc-100 dark:bg-zinc-900 h-0.5 w-0 group-hover:w-full transition-all duration-300 rounded-sm"
+            ></div></button
           >
           <button
+            class="group"
             onclick={() => {
               scrollInto("work-history");
-            }}>Work History</button
+            }}
+            >Work History
+            <div
+              class="bg-zinc-100 dark:bg-zinc-900 h-0.5 w-0 group-hover:w-full transition-all duration-300 rounded-sm"
+            ></div></button
           >
         </div>
 

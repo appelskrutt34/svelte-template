@@ -17,60 +17,9 @@
   const markup = "Markup / Style Language";
 
   const skills = [
-    { skill: "Type Juggling", category: web_security, proficiency: high },
-    { skill: "Prototype Pollution", category: web_security, proficiency: high },
-    { skill: "Timing Attacks", category: web_security, proficiency: high },
-    { skill: "Race Conditions", category: web_security, proficiency: high },
-    {
-      skill: "Deserialization Attacks",
-      category: web_security,
-      proficiency: high,
-    },
-    {
-      skill: "Parameter Logic Bugs",
-      category: web_security,
-      proficiency: high,
-    },
-    {
-      skill: "Blind SQL Injections",
-      category: web_security,
-      proficiency: high,
-    },
-    {
-      skill: "Boolean-Based SQL Injections",
-      category: web_security,
-      proficiency: high,
-    },
-    {
-      skill: "Time-Based SQL Injections",
-      category: web_security,
-      proficiency: high,
-    },
-    {
-      skill: "Error-Based SQL Injections",
-      category: web_security,
-      proficiency: high,
-    },
-    { skill: "DNS Rebinding", category: web_security, proficiency: high },
-    { skill: "IDOR", category: web_security, proficiency: high },
-    { skill: "Websocket Attacks", category: web_security, proficiency: medium },
-    { skill: "CRLF Injection", category: web_security, proficiency: high },
-    {
-      skill: "HTTP Request Smuggling",
-      category: web_security,
-      proficiency: high,
-    },
-    { skill: "HTTP/2 Downgrading", category: web_security, proficiency: high },
-    { skill: "Web Cache Poisoning", category: web_security, proficiency: high },
-    { skill: "Host Header Attacks", category: web_security, proficiency: high },
-    { skill: "Session Puzzling", category: web_security, proficiency: high },
-    { skill: "XSS", category: web_security, proficiency: high },
-    { skill: "JWT Attacks", category: web_security, proficiency: high },
-    { skill: "OAuth Attacks", category: web_security, proficiency: medium },
-    { skill: "SAML Attacks", category: web_security, proficiency: medium },
-    { skill: "NOSQL Injections", category: web_security, proficiency: high },
-    { skill: "XPath Injections", category: web_security, proficiency: high },
-    { skill: "LDAP Injections", category: web_security, proficiency: high },
+    { skill: "Blackbox Pentesting", category: web_security, proficiency: high },
+    { skill: "Whitebox Pentesting", category: web_security, proficiency: high },
+    { skill: "Secure coding", category: web_security, proficiency: high },
     { skill: "BurpSuit", category: web_security, proficiency: high },
     { skill: "Kali Linux", category: web_security, proficiency: high },
     { skill: "Ffuf", category: web_security, proficiency: high },
@@ -85,15 +34,15 @@
     { skill: "Svelte", category: frontend, proficiency: high },
     { skill: "Vue", category: frontend, proficiency: medium },
     { skill: "React", category: frontend, proficiency: medium },
-    { skill: ".NET", category: backend, proficiency: high },
+    { skill: ".NET Framework", category: backend, proficiency: high },
     { skill: ".NET Core", category: backend, proficiency: high },
     { skill: "ASP.NET", category: backend, proficiency: high },
     { skill: "ASP.NET Core", category: backend, proficiency: high },
     { skill: "Azure DevOps", category: devops, proficiency: high },
+    { skill: "Azure Portal", category: devops, proficiency: high },
     { skill: "Github Actions", category: devops, proficiency: high },
     { skill: "Linux", category: "Operating System", proficiency: high },
     { skill: "Tailwind", category: "Styling Framework", proficiency: high },
-    { skill: "IIS", category: hosting, proficiency: high },
   ];
 
   let filtered_skills = $state(skills);
@@ -214,8 +163,8 @@
               <span
                 class={"rounded-2xl px-2 py-1 border border-zinc-900 dark:border-zinc-100 " +
                   (item.proficiency == "High"
-                    ? " bg-green-600"
-                    : " bg-yellow-600")}
+                    ? " bg-green-600 dark:bg-green-800"
+                    : " bg-yellow-600 dark:bg-yellow-800")}
               >
                 {item.proficiency}</span
               >
