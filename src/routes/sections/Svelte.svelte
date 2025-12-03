@@ -42,12 +42,20 @@
   aria-label="Svelte github statistics"
   class="flex flex-col gap-4 w-full"
 >
-  <h1>We <Heart size="24" color={green}></Heart> Svelte</h1>
+  <h1 class="flex items-center">
+    We<span class="relative flex items-center mx-2">
+      <Heart
+        size="24"
+        customClass="fill-green-700 animate-ping absolute opacity-75"
+      />
+      <Heart size="24" customClass="fill-green-700 relative" />
+    </span>Svelte
+  </h1>
   <div class="flex flex-col md:flex-row gap-4 w-full">
     <BorderBox>
       <div class="flex flex-colrounded-sm p-4 gap-6">
         <p class="flex gap-1 items-center">
-          <Star color={yellow}></Star>
+          <Star customClass="fill-yellow-600"></Star>
           {stats.stars} Stars
         </p>
       </div>
@@ -56,7 +64,7 @@
     <BorderBox>
       <div class="flex flex-col p-4 gap-6">
         <p class="flex gap-1 items-center">
-          <Eye color={blue}></Eye>
+          <Eye customClass="fill-blue-600"></Eye>
           {stats.watchers} Watchers
         </p>
       </div>
@@ -65,7 +73,7 @@
     <BorderBox>
       <div class="flex flex-col p-4 gap-6">
         <p class="flex gap-1 items-center">
-          <Fork color={purple}></Fork>
+          <Fork customClass="fill-violet-600"></Fork>
           {stats.forks} Forks
         </p>
       </div>
@@ -76,7 +84,7 @@
     <BorderBox>
       <div class="flex flex-col p-4 gap-6">
         <p class="flex gap-1 items-center">
-          <Heart color={green}></Heart>
+          <Heart customClass="fill-green-700"></Heart>
           {stats.subscribers} Subscribers
         </p>
       </div>
@@ -85,7 +93,7 @@
     <BorderBox>
       <div class="flex flex-col p-4 gap-6">
         <p class="flex gap-1 items-center">
-          <File color={orange}></File>
+          <File customClass="fill-orange-600"></File>
           {stats.sizeKB} Size (KB)
         </p>
       </div>
@@ -97,17 +105,17 @@
       <div class="flex justify-between flex-col pt-4 px-4 gap-6">
         <div class="flex justify-between">
           <p class="flex gap-1 items-center">
-            <Exclamation color={blue}></Exclamation>
+            <Exclamation customClass="fill-blue-600"></Exclamation>
             {opened_issues.reduce((sum, value) => sum + value, 0)} Issues last 30
             Days
           </p>
           <div class="flex flex-col items-start">
             <div class="flex justify-center items-center gap-1">
-              <Circle color={blue}></Circle>
+              <Circle customClass="fill-blue-600"></Circle>
               <p>Opened</p>
             </div>
             <div class="flex justify-center items-center gap-1">
-              <Circle color={cyan}></Circle>
+              <Circle customClass="fill-cyan-600"></Circle>
               <p>Closed</p>
             </div>
           </div>
@@ -131,18 +139,17 @@
       <div class="flex justify-between flex-col pt-4 px-4 gap-6">
         <div class="flex justify-between">
           <p class="flex gap-1 items-center">
-            <PullRequest color={purple}></PullRequest>{opened_prs.reduce(
-              (sum, value) => sum + value,
-              0
-            )} Pull Requests last 30 Days
+            <PullRequest customClass="fill-violet-600"
+            ></PullRequest>{opened_prs.reduce((sum, value) => sum + value, 0)} Pull
+            Requests last 30 Days
           </p>
           <div class="flex flex-col items-start">
             <div class="flex justify-center items-center gap-1">
-              <Circle color={purple}></Circle>
+              <Circle customClass="fill-violet-600"></Circle>
               <p>Opened</p>
             </div>
             <div class="flex justify-center items-center gap-1">
-              <Circle color={pink}></Circle>
+              <Circle customClass="fill-pink-600"></Circle>
               <p>Closed</p>
             </div>
           </div>
@@ -167,7 +174,7 @@
       <div class="flex justify-between flex-col pt-4 px-4 gap-6">
         <div class="flex justify-between">
           <p class="flex gap-1 items-center">
-            <Commit color={orange}></Commit>{pushes.reduce(
+            <Commit customClass="fill-orange-600"></Commit>{pushes.reduce(
               (sum, value) => sum + value,
               0
             ) + commits.reduce((sum, value) => sum + value, 0)} Pushes & Commits
@@ -175,11 +182,11 @@
           </p>
           <div class="flex flex-col items-start">
             <div class="flex justify-center items-center gap-1">
-              <Circle color={orange}></Circle>
+              <Circle customClass="fill-orange-600"></Circle>
               <p>Pushes</p>
             </div>
             <div class="flex justify-center items-center gap-1">
-              <Circle color={red}></Circle>
+              <Circle customClass="fill-rose-600"></Circle>
               <p>Commits</p>
             </div>
           </div>
@@ -205,7 +212,7 @@
       class="flex flex-col md:flex-row items-start md:items-center gap-2 md:justify-between p-6"
     >
       <p class="flex gap-1 items-center">
-        <Heart color={green}></Heart>{commits.reduce(
+        <Heart customClass="fill-green-700"></Heart>{commits.reduce(
           (sum, value) => sum + value,
           0
         ) + pushes.reduce((sum, value) => sum + value, 0)} Contributions the last
@@ -222,7 +229,7 @@
       class="flex flex-col md:flex-row items-start md:items-center gap-2 md:gap-12 justify-between p-4"
     >
       <p class="flex gap-1 items-center">
-        <Heart color={green}></Heart>Top Contributors
+        <Heart customClass="fill-green-700"></Heart>Top Contributors
       </p>
       <div class="flex flex-col md:flex-row gap-4 md:gap-12">
         {#each top_contributors as contributor}

@@ -1,6 +1,6 @@
 export const black = "#09090b";
 export const white = "#f4f4f5";
-export const pink = "#a21caf";
+export const pink = "#be185d";
 export const purple = "#6d28d9";
 export const blue = "#1d4ed8";
 export const cyan = "#0e7490";

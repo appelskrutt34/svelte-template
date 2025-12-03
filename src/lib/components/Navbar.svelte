@@ -53,6 +53,11 @@
               scrollInto("skills");
             }}>Skills</button
           >
+          <button
+            onclick={() => {
+              scrollInto("work-history");
+            }}>Work History</button
+          >
         </div>
 
         <button onclick={toggleDarkMode} aria-pressed={$isDarkMode}
@@ -105,6 +110,12 @@
               scrollInto("skills");
             }}>Skills</button
           >
+          <button
+            onclick={() => {
+              openMenu = false;
+              scrollInto("work-history");
+            }}>Work History</button
+          >
         </div>
       {/if}
     </nav>
@@ -132,6 +143,11 @@
             onclick={() => {
               scrollInto("skills");
             }}>Skills</button
+          >
+          <button
+            onclick={() => {
+              scrollInto("work-history");
+            }}>Work History</button
           >
         </div>
 
@@ -186,6 +202,12 @@
               openMenu = false;
               scrollInto("skills");
             }}>Skills</button
+          >
+          <button
+            onclick={() => {
+              openMenu = false;
+              scrollInto("work-history");
+            }}>Work History</button
           >
         </div>
       {/if}

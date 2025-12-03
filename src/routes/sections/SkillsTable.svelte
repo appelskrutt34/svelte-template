@@ -2,6 +2,7 @@
   import BorderBox from "$lib/components/BorderBox.svelte";
   import ArrowDown from "$lib/components/icons/ArrowDown.svelte";
   import Circle from "$lib/components/icons/Circle.svelte";
+  import Heart from "$lib/components/icons/Heart.svelte";
   import Search from "$lib/components/icons/Search.svelte";
   import { onMount } from "svelte";
 
@@ -130,7 +131,10 @@
 </script>
 
 <section id="skills" class="relative w-full gap-4 flex flex-col">
-  <h1>Technical Skills</h1>
+  <h1>
+    <Heart customClass="animate-bounce fill-green-700 mr-2" size="24"
+    ></Heart>Technical Skills
+  </h1>
   <div class="relative">
     <input
       class="border border-zinc-900 dark:border-zinc-100 w-full rounded-sm pl-8 pr-3 py-3"
@@ -200,7 +204,7 @@
           <div class="flex-1">
             <p class="w-full text-right p-3">
               <span
-                class={"rounded-2xl px-4 py-2 border border-zinc-900 dark:border-zinc-100 " +
+                class={"rounded-2xl px-2 py-1 border border-zinc-900 dark:border-zinc-100 " +
                   (item.proficiency == "High"
                     ? " bg-green-700"
                     : " bg-yellow-600")}

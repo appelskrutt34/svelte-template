@@ -1,48 +1,34 @@
 <script>
   import BorderBox from "$lib/components/BorderBox.svelte";
+  import Heart from "$lib/components/icons/Heart.svelte";
 
   const jobs = [
     {
-      company: "Bonigi",
-      role: "Fullstack Developer",
-      time: "1.5 years",
+      company: "Modoyo",
+      role: "Backend Developer",
+      time: "1.5 years and ongoing",
       skills: [
         "C#",
         "JavaScript",
-        "HTML",
-        "CSS",
-        "Linux",
-        "SQL",
-        "Vue",
-        ".NET Webforms",
-        "Nodejs",
-        "Azure DevOps",
-      ],
-      description: [
-        "Built a web application using Vue and Strapi.",
-        "Set up CI/CD pipelines in Azure DevOps.",
-        "Wrote SQL procedures to handle large volumes of transactional and customer data.",
-      ],
-    },
-    {
-      company: "Sogeti",
-      role: "Fullstack Developer",
-      time: "1.5 years",
-      skills: [
-        "C#",
-        "JavaScript",
+        "Python",
         "React",
-        "Optimizely",
-        "SQL",
-        ".NET Core",
-        "Azure DevOps",
+        ".NET Core WebApps",
+        "AWS",
+        "Terraform",
+        "Telemetry",
+        "Snowflake",
+        "MySQL/MariaDB",
+        "Github Actions",
+        "Github",
+        "Linux",
+        "Snowlit",
       ],
       description: [
-        "Refactored large code bases and fixed technical debt.",
-        "Set up CI/CD pipelines in Azure Devops.",
-        "Fixed accessibility issues across multiple web pages (WCAG).",
-        "Migrated .NET framework projects to .NET Core.",
-        "Doing code reviews and mentoring junior developers",
+        "Building a .NET API to manage players, weapons, matches, and related game data.",
+        "Writing tests using .NET and Cypress.",
+        "Setting up CI/CD pipelines with GitHub Actions.",
+        "Creating Terraform scripts to manage AWS infrastructure.",
+        "Visualizing telemetry data using Python and Snowlit.",
       ],
     },
     {
@@ -53,10 +39,26 @@
         "C#",
         "JavaScript",
         "Svelte",
+        ".NET Framework",
+        ".NET Core",
         "Tailwind",
         "React",
         "SQL",
         "Azure DevOps",
+        "Azure Portal",
+        "Optimizely",
+        "HTML",
+        "CSS",
+        "Typescript",
+        "Linux",
+        "Blazor",
+        "NodeJS",
+        "teamCity",
+        "SQL Server",
+        "Github",
+        "Github Actions",
+        "IIS",
+        "Windows server",
       ],
       description: [
         "Built a payment website with a frontend in Svelte and backend in .NET, integrated with Nets Payments.",
@@ -71,7 +73,14 @@
       company: "Kryptokrona",
       role: "Frontend Developer",
       time: "3 years",
-      skills: ["JavaScript", "TypeScript", "Svelte", "Tailwind", "ApexCharts"],
+      skills: [
+        "JavaScript",
+        "TypeScript",
+        "Svelte",
+        "Tailwind",
+        "ApexCharts",
+        "Github",
+      ],
       description: [
         "Developed data tables displaying real-time mining statistics such as hash rate, block height, and active miners.",
         "Created pages listing all blockchain nodes and their associated metadata.",
@@ -80,58 +89,71 @@
       ],
     },
     {
-      company: "Modoyo",
-      role: "Backend Developer",
+      company: "Sogeti",
+      role: "Fullstack Developer",
       time: "1.5 years",
       skills: [
         "C#",
         "JavaScript",
-        "Python",
         "React",
-        ".NET",
-        "AWS",
-        "Terraform",
-        "Telemetry",
-        "Snowflake",
-        "MySQL/MariaDB",
-        "Github Actions",
-        "Linux",
-        "Snowlit",
+        "Optimizely",
+        "SQL",
+        "SQL Server",
+        ".NET Core",
+        ".NET Framework",
+        "IIS",
+        "Windows Server",
+        "Azure DevOps",
+        "Azure Portal",
       ],
       description: [
-        "Building a .NET API to manage players, weapons, matches, and related game data.",
-        "Writing tests using .NET and Cypress.",
-        "Setting up CI/CD pipelines with GitHub Actions.",
-        "Creating Terraform scripts to manage AWS infrastructure.",
-        "Visualizing telemetry data using Python and Snowlit.",
+        "Refactored large code bases and fixed technical debt.",
+        "Set up CI/CD pipelines in Azure Devops.",
+        "Fixed accessibility issues across multiple web pages (WCAG).",
+        "Migrated .NET framework projects to .NET Core.",
+        "Doing code reviews and mentoring junior developers.",
       ],
     },
     {
-      company: "Hack The Box",
-      role: "Cyber Defense & Exploitation Practitioner",
-      time: "3 years and ongoing",
+      company: "Bonigi",
+      role: "Fullstack Developer",
+      time: "1.5 years",
       skills: [
-        "BurpSuite",
+        "C#",
+        "JavaScript",
+        "HTML",
+        "CSS",
         "Linux",
-        "SQLi",
-        "XSS",
-        "CSRF",
-        "HTTP/HTTPS attacks",
+        "SQL",
+        "SQL Server",
+        "VueJS",
+        ".NET Webforms",
+        "NodeJS",
+        "Azure DevOps",
       ],
-      description: "307 targets compromised. Global ranking: Top 1%.",
+      description: [
+        "Built a web application using Vue and Strapi.",
+        "Set up CI/CD pipelines in Azure DevOps.",
+        "Wrote SQL procedures to handle large volumes of transactional and customer data.",
+      ],
     },
   ];
 </script>
 
-<section class="flex flex-col gap-4">
-  <h1>Work History</h1>
-  <div class="flex gap-4">
-    <BorderBox customClass="rounded-br-2xl dark:shadow-solid">
+<section class="flex flex-col gap-4" id="work-history">
+  <h1>
+    <Heart customClass="animate-bounce fill-green-700 mr-2" size="24"
+    ></Heart>Work History
+  </h1>
+  <div class="flex flex-col md:flex-row gap-6">
+    <BorderBox
+      customClass="rounded-br-2xl shadow-lg shadow-zinc-500/50 dark:shadow-none"
+    >
       <div class="p-4">
         <h2>{jobs[0].company}</h2>
         <p>{jobs[0].role}</p>
         <p class="mb-4">{jobs[0].time}</p>
-        <ul class="list-disc px-4 mb-4">
+        <ul class="list-disc px-4 mb-4 text-xs md:text-md">
           {#each jobs[0].description as desc}
             <li class="mb-1">{desc}</li>
           {/each}
@@ -147,11 +169,11 @@
       </div>
     </BorderBox>
     <BorderBox
-      customClass="rounded-bl-2xl shadow-soft-transition dark:shadow-solid-md"
+      customClass="rounded-bl-2xl hover:shadow-lg hover:shadow-zinc-500/50 transition ease-in-out duration-300 dark:hover:shadow-none"
     >
       <div class="p-4">
-        <h2>{jobs[1].role}</h2>
-        <p>{jobs[1].company}</p>
+        <h2>{jobs[1].company}</h2>
+        <p>{jobs[1].role}</p>
         <p class="mb-4">{jobs[1].time}</p>
         <ul class="list-disc px-4 mb-4">
           {#each jobs[1].description as desc}
@@ -169,13 +191,13 @@
       </div>
     </BorderBox>
   </div>
-  <div class="flex gap-4">
+  <div class="flex flex-col md:flex-row gap-6">
     <BorderBox
       customClass="rounded-tr-2xl hover:shadow-lg hover:shadow-zinc-500/50 transition ease-in-out duration-300 dark:hover:shadow-none"
     >
       <div class="p-4">
-        <h2>{jobs[2].role}</h2>
-        <p>{jobs[2].company}</p>
+        <h2>{jobs[2].company}</h2>
+        <p>{jobs[2].role}</p>
         <p class="mb-4">{jobs[2].time}</p>
         <ul class="list-disc px-4 mb-4">
           {#each jobs[2].description as desc}
@@ -194,8 +216,8 @@
     </BorderBox>
     <BorderBox customClass="rounded-tl-2xl bg-zinc-200 dark:bg-zinc-800">
       <div class="p-4">
-        <h2>{jobs[3].role}</h2>
-        <p>{jobs[3].company}</p>
+        <h2>{jobs[3].company}</h2>
+        <p>{jobs[3].role}</p>
         <p class="mb-4">{jobs[3].time}</p>
         <ul class="list-disc px-4 mb-4">
           {#each jobs[3].description as desc}
@@ -213,12 +235,10 @@
       </div>
     </BorderBox>
   </div>
-  <BorderBox
-    customClass="rounded-t-2xl shadow-lg shadow-zinc-500/50 dark:shadow-none"
-  >
+  <BorderBox customClass="rounded-t-2xl">
     <div class="p-4">
-      <h2>{jobs[4].role}</h2>
-      <p>{jobs[4].company}</p>
+      <h2>{jobs[4].company}</h2>
+      <p>{jobs[4].role}</p>
       <p class="mb-4">{jobs[4].time}</p>
       <ul class="list-disc px-4 mb-4">
         {#each jobs[4].description as desc}
