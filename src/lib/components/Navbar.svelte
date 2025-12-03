@@ -38,7 +38,7 @@
       >
         <div class="flex gap-8">
           <a
-            class="hover:scale-125 transition-transform duration-300"
+            class="hover:scale-125 transition-transform duration-200"
             href="https://www.linkedin.com/in/ebba-svensson-6a295b187/"
             aria-label="Linkedin"
             ><Linkedin
@@ -79,9 +79,9 @@
 
         <button onclick={toggleDarkMode} aria-pressed={$isDarkMode}
           >{#if $isDarkMode}<ToggleOn
-              customClass="fill-zinc-100 hover:scale-125 transition-transform duration-300"
+              customClass="fill-zinc-100 hover:scale-125 transition-transform duration-200"
             ></ToggleOn>{:else}<ToggleOff
-              customClass="fill-zinc-900 hover:scale-125 transition-transform duration-300"
+              customClass="fill-zinc-900 hover:scale-125 transition-transform duration-200"
             ></ToggleOff>{/if} Dark Mode
         </button>
       </nav>
@@ -151,6 +151,7 @@
       >
         <div class="flex gap-8">
           <a
+            class="hover:scale-125 transition-transform duration-300"
             href="https://www.linkedin.com/in/ebba-svensson-6a295b187/"
             aria-label="Linkedin"
             ><Linkedin
@@ -190,8 +191,10 @@
         </div>
 
         <button onclick={toggleDarkMode} aria-pressed={$isDarkMode}
-          >{#if $isDarkMode}<ToggleOn customClass="fill-zinc-900"
-            ></ToggleOn>{:else}<ToggleOff customClass="fill-zinc-100"
+          >{#if $isDarkMode}<ToggleOn
+              customClass="fill-zinc-900 hover:scale-125 transition-transform duration-200"
+            ></ToggleOn>{:else}<ToggleOff
+              customClass="fill-zinc-100 hover:scale-125 transition-transform duration-200"
             ></ToggleOff>{/if} Dark Mode
         </button>
       </nav>

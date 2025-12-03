@@ -15,7 +15,7 @@
 {#each data as value}
   <Tooltip title={value}>
     <div
-      class="bg-green-700 w-3 h-3"
+      class="bg-green-700 w-3 h-3 hover:cursor-pointer"
       style="filter: brightness({getBrightness(value)}%)"
     ></div>
   </Tooltip>
