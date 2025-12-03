@@ -96,9 +96,9 @@
       <Search></Search>
     </div>
   </div>
-  <BorderBox>
-    <div
-      class="h-96 overflow-scroll flex flex-col rounded-sm
+
+  <div
+    class="border border-zinc-900 dark:border-zinc-100 h-96 overflow-scroll flex flex-col rounded-sm
       [&::-webkit-scrollbar]:w-4
   [&::-webkit-scrollbar-track]:bg-zinc-100
   [&::-webkit-scrollbar-thumb]:bg-zinc-900
@@ -106,72 +106,71 @@
   dark:[&::-webkit-scrollbar-thumb]:bg-zinc-100
   [&::-webkit-scrollbar-track]:rounded-sm
   [&::-webkit-scrollbar-thumb]:rounded-sm"
+  >
+    <div
+      class="flex sticky top-0 bg-zinc-100 dark:bg-zinc-900 border-b border-zinc-900 dark:border-zinc-100"
     >
+      <div class="flex-1">
+        <button
+          class="w-full text-left p-3 md:hover:bg-zinc-900 md:hover:text-zinc-100 md:dark:hover:bg-zinc-100 md:dark:hover:text-zinc-900"
+          onclick={sortBySkill}
+        >
+          Skill
+        </button>
+      </div>
       <div
-        class="flex sticky top-0 bg-zinc-100 dark:bg-zinc-900 border-b border-zinc-900 dark:border-zinc-100"
+        class="hidden md:flex flex-1 border-r border-l border-zinc-900 dark:border-zinc-100"
       >
+        <button
+          class="w-full text-center p-3 md:hover:bg-zinc-900 md:hover:text-zinc-100 md:dark:hover:bg-zinc-100 md:dark:hover:text-zinc-900"
+          onclick={sortByCategory}
+        >
+          Category
+        </button>
+      </div>
+      <div class="flex-1">
+        <button
+          class="w-full text-right p-3 md:hover:bg-zinc-900 md:hover:text-zinc-100 md:dark:hover:bg-zinc-100 md:dark:hover:text-zinc-900"
+          onclick={sortByProficiency}
+        >
+          Proficiency
+        </button>
+      </div>
+    </div>
+
+    {#if filtered_skills.length == 0}
+      <p class="p-3 border-b border-zinc-900 dark:border-zinc-100">
+        Not a skill I've mastered yet — but give me a day and I'll get it done
+      </p>
+    {/if}
+
+    {#each filtered_skills as item, i}
+      <div class="flex border-b border-zinc-900 dark:border-zinc-100">
         <div class="flex-1">
-          <button
-            class="w-full text-left p-3 md:hover:bg-zinc-900 md:hover:text-zinc-100 md:dark:hover:bg-zinc-100 md:dark:hover:text-zinc-900"
-            onclick={sortBySkill}
-          >
-            Skill
-          </button>
+          <p class="w-full text-left p-3">
+            {item.skill}
+          </p>
         </div>
         <div
           class="hidden md:flex flex-1 border-r border-l border-zinc-900 dark:border-zinc-100"
         >
-          <button
-            class="w-full text-center p-3 md:hover:bg-zinc-900 md:hover:text-zinc-100 md:dark:hover:bg-zinc-100 md:dark:hover:text-zinc-900"
-            onclick={sortByCategory}
-          >
-            Category
-          </button>
+          <p class="w-full text-center p-3">
+            {item.category}
+          </p>
         </div>
         <div class="flex-1">
-          <button
-            class="w-full text-right p-3 md:hover:bg-zinc-900 md:hover:text-zinc-100 md:dark:hover:bg-zinc-100 md:dark:hover:text-zinc-900"
-            onclick={sortByProficiency}
-          >
-            Proficiency
-          </button>
+          <p class="w-full text-right p-3">
+            <span
+              class={"rounded-2xl px-2 py-1 border border-zinc-900 dark:border-zinc-100 " +
+                (item.proficiency == "High"
+                  ? " bg-green-600 dark:bg-green-800"
+                  : " bg-yellow-600 dark:bg-yellow-800")}
+            >
+              {item.proficiency}</span
+            >
+          </p>
         </div>
       </div>
-
-      {#if filtered_skills.length == 0}
-        <p class="p-3 border-b border-zinc-900 dark:border-zinc-100">
-          Not a skill I've mastered yet — but give me a day and I'll get it done
-        </p>
-      {/if}
-
-      {#each filtered_skills as item, i}
-        <div class="flex border-b border-zinc-900 dark:border-zinc-100">
-          <div class="flex-1">
-            <p class="w-full text-left p-3">
-              {item.skill}
-            </p>
-          </div>
-          <div
-            class="hidden md:flex flex-1 border-r border-l border-zinc-900 dark:border-zinc-100"
-          >
-            <p class="w-full text-center p-3">
-              {item.category}
-            </p>
-          </div>
-          <div class="flex-1">
-            <p class="w-full text-right p-3">
-              <span
-                class={"rounded-2xl px-2 py-1 border border-zinc-900 dark:border-zinc-100 " +
-                  (item.proficiency == "High"
-                    ? " bg-green-600 dark:bg-green-800"
-                    : " bg-yellow-600 dark:bg-yellow-800")}
-              >
-                {item.proficiency}</span
-              >
-            </p>
-          </div>
-        </div>
-      {/each}
-    </div>
-  </BorderBox>
+    {/each}
+  </div>
 </section>

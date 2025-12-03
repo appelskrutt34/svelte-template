@@ -4,18 +4,19 @@ import {
   getIssues,
   getPushes,
   getStats,
-  getTopContributors
+  getTopContributors,
 } from "$lib/api/git";
 
 export async function load() {
-  const [prs, commits, issues, pushes, stats, top_contributors] = await Promise.all([
-    getPullRequests(),
-    getCommits(),
-    getIssues(),
-    getPushes(),
-    getStats(),
-    getTopContributors()
-  ]);
+  const [prs, commits, issues, pushes, stats, top_contributors] =
+    await Promise.all([
+      getPullRequests(),
+      getCommits(),
+      getIssues(),
+      getPushes(),
+      getStats(),
+      getTopContributors(),
+    ]);
 
   return {
     opened_issues: issues.opened_by_date,
@@ -25,6 +26,6 @@ export async function load() {
     closed_prs: prs.closed_by_date,
     commits,
     stats,
-    top_contributors
+    top_contributors,
   };
 }
