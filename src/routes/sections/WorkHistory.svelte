@@ -214,7 +214,7 @@
         {/each}
       </div>
     </BorderBox>
-    <BorderBox customClass="rounded-tl-2xl bg-zinc-200 dark:bg-zinc-800">
+    <BorderBox customClass="rounded-tl-2xl bg-zinc-300 dark:bg-zinc-800">
       <div class="p-4">
         <h2>{jobs[3].company}</h2>
         <p>{jobs[3].role}</p>
