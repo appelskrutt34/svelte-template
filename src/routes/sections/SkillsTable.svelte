@@ -148,7 +148,16 @@
     </div>
   </div>
   <BorderBox>
-    <div class="h-96 overflow-scroll flex flex-col rounded-sm">
+    <div
+      class="h-96 overflow-scroll flex flex-col rounded-sm
+      [&::-webkit-scrollbar]:w-4
+  [&::-webkit-scrollbar-track]:bg-zinc-100
+  [&::-webkit-scrollbar-thumb]:bg-zinc-900
+  dark:[&::-webkit-scrollbar-track]:bg-zinc-900
+  dark:[&::-webkit-scrollbar-thumb]:bg-zinc-100
+  [&::-webkit-scrollbar-track]:rounded-sm
+  [&::-webkit-scrollbar-thumb]:rounded-sm"
+    >
       <div
         class="flex sticky top-0 bg-zinc-100 dark:bg-zinc-900 border-b border-zinc-900 dark:border-zinc-100"
       >
