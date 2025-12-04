@@ -2,14 +2,6 @@
 @custom-variant dark (&:where(.dark, .dark *));
 
 
-@font-face {
-  font-family: "Roboto Mono";
-  src: url("/roboto-mono-v31-latin-regular.woff2") format("woff2");
-  font-weight: 400;
-  font-style: normal;
-  font-display: swap;
-}
-
 .apexcharts-datalabel,
 .apexcharts-data-labels text {
   display: none !important;
@@ -17,10 +9,12 @@
 
 h1 {
   font-size: 30px;
+  font-weight: 600;
 }
 
 h2 {
   font-size: 25px;
+  font-weight: 500;
 }
 
 button {

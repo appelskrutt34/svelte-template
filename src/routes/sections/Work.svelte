@@ -152,7 +152,7 @@
       <div class="p-4">
         <h2>{jobs[0].company}</h2>
         <p>{jobs[0].role}</p>
-        <p class="mb-4">{jobs[0].time}</p>
+        <p class="mb-4 font-light">{jobs[0].time}</p>
         <ul class="list-disc px-4 mb-4 text-xs md:text-md">
           {#each jobs[0].description as desc}
             <li class="mb-1">{desc}</li>
@@ -174,7 +174,7 @@
       <div class="p-4">
         <h2>{jobs[1].company}</h2>
         <p>{jobs[1].role}</p>
-        <p class="mb-4">{jobs[1].time}</p>
+        <p class="mb-4 font-light">{jobs[1].time}</p>
         <ul class="list-disc px-4 mb-4">
           {#each jobs[1].description as desc}
             <li class="mb-1">{desc}</li>
@@ -198,7 +198,7 @@
       <div class="p-4">
         <h2>{jobs[2].company}</h2>
         <p>{jobs[2].role}</p>
-        <p class="mb-4">{jobs[2].time}</p>
+        <p class="mb-4 font-light">{jobs[2].time}</p>
         <ul class="list-disc px-4 mb-4">
           {#each jobs[2].description as desc}
             <li class="mb-1">{desc}</li>
@@ -218,7 +218,7 @@
       <div class="p-4">
         <h2>{jobs[3].company}</h2>
         <p>{jobs[3].role}</p>
-        <p class="mb-4">{jobs[3].time}</p>
+        <p class="mb-4 font-light">{jobs[3].time}</p>
         <ul class="list-disc px-4 mb-4">
           {#each jobs[3].description as desc}
             <li class="mb-1">{desc}</li>
@@ -239,7 +239,7 @@
     <div class="p-4">
       <h2>{jobs[4].company}</h2>
       <p>{jobs[4].role}</p>
-      <p class="mb-4">{jobs[4].time}</p>
+      <p class="mb-4 font-light">{jobs[4].time}</p>
       <ul class="list-disc px-4 mb-4">
         {#each jobs[4].description as desc}
           <li class="mb-1">{desc}</li>

@@ -5,8 +5,6 @@
   import Work from "./sections/Work.svelte";
   import Navbar from "$lib/components/Navbar.svelte";
   import { page } from "$app/stores";
-  import { onMount } from "svelte";
-  import LoadingScreen from "./sections/LoadingScreen.svelte";
 </script>
 
 <Navbar></Navbar>
