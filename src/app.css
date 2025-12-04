@@ -5,7 +5,9 @@
 @font-face {
   font-family: "Roboto Mono";
   src: url("/roboto-mono-v31-latin-regular.woff2") format("woff2");
-  font-display: swap;
+  font-weight: 400;
+  font-style: normal;
+  font-display: block;
 }
 
 .apexcharts-datalabel,
@@ -51,7 +53,7 @@ svg {
 body {
   background-color: #f4f4f5;
   color: #18181b;
-  font-family: "roboto mono";
+  font-family: "roboto mono","Liberation Mono";
   transition: background-color 0.3s;
 }
 
