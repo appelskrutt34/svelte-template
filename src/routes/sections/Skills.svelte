@@ -108,7 +108,7 @@
   [&::-webkit-scrollbar-thumb]:rounded-sm"
   >
     <div
-      class="flex sticky top-0 bg-zinc-100 dark:bg-zinc-900 border-b border-zinc-900 dark:border-zinc-100"
+      class="font-bold flex sticky top-0 bg-zinc-100 dark:bg-zinc-900 border-b border-zinc-900 dark:border-zinc-100"
     >
       <div class="flex-1">
         <button

@@ -3,8 +3,8 @@
   const { data } = $props();
 
   function getBrightness(value) {
-    if (value < 3) return 40;
-    if (value < 9) return 60;
+    if (value < 3) return 60;
+    if (value < 9) return 80;
     if (value < 12) return 100;
     if (value < 15) return 125;
     if (value < 18) return 150;

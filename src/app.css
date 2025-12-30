@@ -1,6 +1,7 @@
 @import "tailwindcss";
 @custom-variant dark (&:where(.dark, .dark *));
 
+
 .apexcharts-datalabel,
 .apexcharts-data-labels text {
   display: none !important;
@@ -8,10 +9,12 @@
 
 h1 {
   font-size: 30px;
+  font-weight: 600;
 }
 
 h2 {
   font-size: 25px;
+  font-weight: 500;
 }
 
 button {
@@ -44,7 +47,7 @@ svg {
 body {
   background-color: #f4f4f5;
   color: #18181b;
-  font-family: "roboto mono";
+  font-family: "roboto mono","Liberation Mono";
   transition: background-color 0.3s;
 }
 
@@ -53,17 +56,3 @@ body.dark {
   background-color: #18181b;
 }
 
-@layer utilities {
-  .brightness-20 {
-    filter: brightness(0.2);
-  }
-  .brightness-40 {
-    filter: brightness(0.4);
-  }
-  .brightness-60 {
-    filter: brightness(0.6);
-  }
-  .brightness-80 {
-    filter: brightness(0.8);
-  }
-}
