@@ -105,8 +105,7 @@
         <div class="flex justify-between">
           <p class="flex gap-1 items-center">
             <Exclamation customClass="fill-blue-600"></Exclamation>
-            {opened_issues.reduce((sum, value) => sum + value, 0)} Issues last 30
-            Days
+            {opened_issues.reduce((sum, value) => sum + value, 0)} Issues
           </p>
           <div class="flex flex-col items-start">
             <div class="flex justify-center items-center gap-1">
@@ -140,7 +139,7 @@
           <p class="flex gap-1 items-center">
             <PullRequest customClass="fill-violet-600"
             ></PullRequest>{opened_prs.reduce((sum, value) => sum + value, 0)} Pull
-            Requests last 30 Days
+            Requests
           </p>
           <div class="flex flex-col items-start">
             <div class="flex justify-center items-center gap-1">
@@ -177,7 +176,6 @@
               (sum, value) => sum + value,
               0
             ) + commits.reduce((sum, value) => sum + value, 0)} Pushes & Commits
-            last 30 Days
           </p>
           <div class="flex flex-col items-start">
             <div class="flex justify-center items-center gap-1">
